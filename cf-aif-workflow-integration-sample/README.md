@@ -208,14 +208,22 @@ Looks like below:
 <div align=center><img src="./images/oAuth_Client2.png"/></div> 
 
 ### Link AIF with SCP Workflow Service
+Open transaction “SEGW”, make user service SWF_CPWF_NOTIFICATION_SRV was registered for ABAP sysetm.
+
 Open transaction “SM30”, 
 in the input field “Table/View”, fill value “V_SWF_CPWF_CNSMR”, click the “Maintain” button.
 In the data maintenance overview screen, if there is no entry for Consumer Type “AIF_ALERT”, create a new entry. Fill the following fields:
 Consumer: AIF_ALERT
 Consumer text Description:  AIF Testing
+Save it.
+
+Open transaction “SM30”, 
 in the input field “Table/View”, fill value “V_SWF_CPWF_CNSMA”, click the “Maintain” button.
 Consumer: AIF_ALERT
 Active:  X
+Save it.
+
+Open transaction “SM30”, 
 in the input field “Table/View”, fill value “V_SWF_CPWF_DEST”, click the “Maintain” button.  
 In the data maintenance overview screen, if there is no entry for Consumer Type “AIF_ALERT”, create a new entry. Fill the following fields:    
 

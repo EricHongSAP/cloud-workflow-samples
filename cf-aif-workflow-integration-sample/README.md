@@ -67,9 +67,10 @@ After role created, click the role name in the role collection list, in next pag
 After creating the role collection, [refer to help document](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/9e1bf57130ef466e8017eab298b40e5e.html), assign the users who will monitor the workflow instances to the created role collection.
 
 ### Setup SAP Cloud Connector
-[Refer to Help document](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/3f974eae3cba4dafa274ec59f69daba6.html), set up a new connector to your cloud subacount.
-Select "Cloud to On-Premise", Add a new “Mapping Virtual to Internal ABAP System”,
-Example:
+[Refer to Help document](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/3f974eae3cba4dafa274ec59f69daba6.html), set up a new connector to your cloud subacount.  
+Select "Cloud to On-Premise", Add a new “Mapping Virtual to Internal ABAP System”,  
+
+	Example:
 	Field 		Value
 	Back-end Type:	ABAP System
 	Protocol:	HTTPS
@@ -79,7 +80,8 @@ Example:
 	Virtual Port:	443##
 	Principal Type: 	None
 	Host in Request Header:	Use Virtual Host
-Add new “Resource” and click button “Add”, the page “Add Resource” will be popped up, fill the fields with value listed below:
+Add new “Resource” and click button “Add”, the page “Add Resource” will be popped up, fill the fields with value listed below:  
+	
 	URL Path:	/
 	Active:		true
 	Access Policy:	Path and all sub-paths
@@ -108,7 +110,7 @@ Save it and check the availability of connection.
 
 This destination will be used in workflow definition, 
 
-Example:
+	Example:
 	Name: 		 YI3_000
 	Type:            HTTP
 	Url: 	         This the URL from SCC virtual host and port, e.g. https://ldci###.wdf.sap.corp:443##
@@ -121,7 +123,8 @@ Example:
 	WebIDEEnabled:    true
 	WebIDESystem:     <you abap system id>, example: YI3
 	WebIDEUsage:      odata_gen,odata_abap,dev_abap,ui5_execute_abap,bsp_execute_abap
-Save it.
+	
+Save it.  
 
 
 ### Download and Deploy Workflow Monitoring LaunchPad
@@ -207,22 +210,25 @@ Looks like below:
 <div align=center><img src="./images/oAuth_Client2.png"/></div> 
 
 ### Link AIF with SCP Workflow Service
-Open transaction “SEGW”, make sure the service SWF_CPWF_NOTIFICATION_SRV was registered for testing ABAP sysetm.
+Open transaction “SEGW”, make sure the service “SWF_CPWF_NOTIFICATION_SRV” was registered for testing ABAP sysetm.  
 
-Open transaction “SM30”, 
-in the input field “Table/View”, fill value “V_SWF_CPWF_CNSMR”, click the “Maintain” button.
-In the data maintenance overview screen, if there is no entry for Consumer Type “AIF_ALERT”, create a new entry. Fill the following fields:
-Consumer: AIF_ALERT
-Consumer text Description:  AIF Testing
-Save it.
+Open transaction “SM30”,   
+in the input field “Table/View”, fill value “V_SWF_CPWF_CNSMR”, click the “Maintain” button.  
+In the data maintenance overview screen, if there is no entry for Consumer Type “AIF_ALERT”, create a new entry.   
+Fill the following fields:  
 
-Open transaction “SM30”, 
-in the input field “Table/View”, fill value “V_SWF_CPWF_CNSMA”, click the “Maintain” button.
-Consumer: AIF_ALERT
-Active:  X
-Save it.
+	Consumer: AIF_ALERT  
+	Consumer text Description:  AIF Testing  
+Save it.  
 
-Open transaction “SM30”, 
+Open transaction “SM30”,   
+in the input field “Table/View”, fill value “V_SWF_CPWF_CNSMA”, click the “Maintain” button.  
+
+	Consumer: AIF_ALERT  
+	Active:  X  
+Save it.  
+
+Open transaction “SM30”,   
 in the input field “Table/View”, fill value “V_SWF_CPWF_DEST”, click the “Maintain” button.  
 In the data maintenance overview screen, if there is no entry for Consumer Type “AIF_ALERT”, create a new entry. Fill the following fields:    
 

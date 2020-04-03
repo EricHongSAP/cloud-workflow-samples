@@ -69,8 +69,7 @@ After creating the role collection, [refer to help document](https://help.sap.co
 ### Setup SAP Cloud Connector
 [Refer to Help document](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/3f974eae3cba4dafa274ec59f69daba6.html), set up a new connector to your cloud subacount.
 Select "Cloud to On-Premise", Add a new “Mapping Virtual to Internal ABAP System”,
-
-example:
+Example:
 	Field 		Value
 	Back-end Type:	ABAP System
 	Protocol:	HTTPS
@@ -208,7 +207,7 @@ Looks like below:
 <div align=center><img src="./images/oAuth_Client2.png"/></div> 
 
 ### Link AIF with SCP Workflow Service
-Open transaction “SEGW”, make user service SWF_CPWF_NOTIFICATION_SRV was registered for ABAP sysetm.
+Open transaction “SEGW”, make sure the service SWF_CPWF_NOTIFICATION_SRV was registered for testing ABAP sysetm.
 
 Open transaction “SM30”, 
 in the input field “Table/View”, fill value “V_SWF_CPWF_CNSMR”, click the “Maintain” button.

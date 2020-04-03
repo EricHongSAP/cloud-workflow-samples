@@ -156,7 +156,7 @@ Once the import is successful, expand the “AIFAlertWorkflow” folder, expand 
 The workflow definition should be open in the right editor.  
 Select the “Send Error Mail” mail task, in the right properties section, switch to “Details” tab, change the “To” field with the email addresses which should receive the alert email for workflow instance, save your change.  
 
- <div align=center><img src="./images/Edit_Mail.png"/></div>    
+ <div align=center><img src="./images/Edit_Mail2.png"/></div>    
 
 [Build and deploy](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/1b0a7a0938944c7fac978d4b8e23a63f.html) to the project to SAP Cloud Platform.
 

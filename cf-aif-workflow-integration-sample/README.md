@@ -69,20 +69,21 @@ After creating the role collection, [refer to help document](https://help.sap.co
 ### Setup SAP Cloud Connector
 [Refer to Help document](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/3f974eae3cba4dafa274ec59f69daba6.html), set up a new connector to your cloud subacount.
 Select "Cloud to On-Premise", Add a new “Mapping Virtual to Internal ABAP System”,
+
 example:
-Field 		Value
-Back-end Type:	ABAP System
-Protocol:	HTTPS
-Internal Host:	###-###.wdf.sap.corp 
-Internal Port:	443##
-Virtual Host:	###-###.wdf.sap.corp 
-Virtual Port:	443##
-Principal Type: 	None
-Host in Request Header:	Use Virtual Host
+	Field 		Value
+	Back-end Type:	ABAP System
+	Protocol:	HTTPS
+	Internal Host:	######.wdf.sap.corp 
+	Internal Port:	443##
+	Virtual Host:	######.wdf.sap.corp 
+	Virtual Port:	443##
+	Principal Type: 	None
+	Host in Request Header:	Use Virtual Host
 Add new “Resource” and click button “Add”, the page “Add Resource” will be popped up, fill the fields with value listed below:
-URL Path:	/
-Active:		true
-Access Policy:	Path and all sub-paths
+	URL Path:	/
+	Active:		true
+	Access Policy:	Path and all sub-paths
 Save it and check the availability of connection.
 
 ### Create Destination for Email Service
@@ -105,19 +106,24 @@ Save it and check the availability of connection.
 <div align=center><img src="./images/Mail_Destination.png"/></div>    
 
 ### Create Destination for workfow to callback to ABAP system
-This destination will be used in workflow definition, e.g: YI3_000，
-Type:            HTTP
-Url: 	         This the URL from SCC virtual host and port, e.g. http://ldciyi3.wdf.sap.corp:44333
-Proxy type:      OnPremise
-Authentication:  <BasicAuthentication, according your environment>
-User:            <your test user in abap system>
-Password:        <your test user password>
-Parameters: 
-sap-client:      <your abap system client> e.g: 000
-WebIDEEnabled:    true
-WebIDESystem:     <you abap system id>, e.g. YI3
-WebIDEUsage:      odata_gen,odata_abap,dev_abap,ui5_execute_abap,bsp_execute_abap
+
+This destination will be used in workflow definition, 
+
+Example:
+	Name: 		 YI3_000
+	Type:            HTTP
+	Url: 	         This the URL from SCC virtual host and port, e.g. https://ldci###.wdf.sap.corp:443##
+	Proxy type:      OnPremise
+	Authentication:  <BasicAuthentication, according your environment>
+	User:            <your test user in abap system>
+	Password:        <your test user password>
+	Parameters: 
+	sap-client:      <your abap system client> example: 000
+	WebIDEEnabled:    true
+	WebIDESystem:     <you abap system id>, example: YI3
+	WebIDEUsage:      odata_gen,odata_abap,dev_abap,ui5_execute_abap,bsp_execute_abap
 Save it.
+
 
 ### Download and Deploy Workflow Monitoring LaunchPad
 Download or clone the following content from Git repository:  
@@ -199,7 +205,7 @@ Fill the following parameters for the profile configuration:
 	
 Looks like below:  
 
-<div align=center><img src="./images/oAuth_CLient.png"/></div> 
+<div align=center><img src="./images/oAuth_Client2.png"/></div> 
 
 ### Link AIF with SCP Workflow Service
 Open transaction “SM30”, 
@@ -242,7 +248,7 @@ In the Fiori Launchpad, select tile “My Inbox”, the user task application wi
 Select the list item, in the right part of the same page, the AIF message information will be displayed.  
 Looks like below:  
 
-<div align=center><img src="./images/User_Task.png"/></div> 
+<div align=center><img src="./images/User_Task2.png"/></div> 
 
 # Trouble Shooting
 ## SCP Service Call Logs

@@ -1,7 +1,7 @@
 # AIF SAP Workflow Integration Sample
 SAP Application Interface Framework(AIF) SAP Workflow integration sample projects as reference content. Users can download and import the content of this project to their tenant to understand and learn how-to integrate AIF and SAP workflow.  
 
-[SAP Workflow](https://cloudplatform.sap.com/capabilities/product-info.SAP-Cloud-Platform-Workflow.df696e5a-d973-4ecd-8d8d-532d60aa1921.html) allows you to build, run, and manage workflows, from simple approvals to end-to-end processes that can span across different organizations and applications. With an inbox application and custom-built user interfaces, you involve end-users into business processes for decision making and data entry.
+[SAP Workflow](https://help.sap.com/viewer/product/WORKFLOW_SERVICE/Cloud/en-US) allows you to build, run, and manage workflows, from simple approvals to end-to-end processes that can span across different organizations and applications. With an inbox application and custom-built user interfaces, you involve end-users into business processes for decision making and data entry.
 
 [SAP Application Interface Framework (AIF)](https://www.sap.com/products/application-interface-mgmt.html) allows you implement, monitor, and manage application interfaces from a central location to simplify interface handling across your system landscape.
 

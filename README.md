@@ -4,7 +4,7 @@
 ## Description
 [SAP Workflow](https://cloudplatform.sap.com/capabilities/product-info.SAP-Cloud-Platform-Workflow.df696e5a-d973-4ecd-8d8d-532d60aa1921.html) allows you to build, run, and manage workflows, from simple approvals to end-to-end processes that can span across different organizations and applications. With an inbox application and custom-built user interfaces, you involve end-users into business processes for decision making and data entry.
 
-This *SAP Cloud Workflow samples project* contains a collection of workflow applications to demonstrate the usage of SAP Workflow in the context of extending the standard processes in SAP SuccessFactors, SAP S/4HANA, SAP Jam, SAP Concur, etc. They are intended to be used as a reference content for the development of workflow-based applications.
+This *SAP Workflow samples project* contains a collection of workflow applications to demonstrate the usage of SAP Workflow in the context of extending the standard processes in SAP SuccessFactors, SAP S/4HANA, SAP Jam, SAP Concur, etc. They are intended to be used as a reference content for the development of workflow-based applications.
 
 ### List of sample projects
 |Application|Scenario|Scenario Description|

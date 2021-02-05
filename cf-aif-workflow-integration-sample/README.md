@@ -20,7 +20,7 @@ Active subscription to Connectivity, Destination, Portal services and SAP WebIDE
 S/4 HANA system with AIF interface.
 
 # Setup Guide
-## Setup in SAP Business Technology Platform
+## Setup in SAP Business Technology Platform (SAP BTP)
 ### Create SAP Workflow Service Instance
 [Refer to help document](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5516f912bae84922ba8c8eb46b8bfce5.html), create a new SAP Workflow service instance with following parameters:
 
@@ -66,7 +66,7 @@ After role created, click the role name in the role collection list, in next pag
 ### Assign Role Collection
 After creating the role collection, [refer to help document](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/9e1bf57130ef466e8017eab298b40e5e.html), assign the users who will monitor the workflow instances to the created role collection.
 
-### Setup SAP Cloud Connector
+### Setup SAP Cloud Connector(SAP SCC)
 [Refer to Help document](https://help.sap.com/viewer/cca91383641e40ffbe03bdc78f00f681/Cloud/en-US/3f974eae3cba4dafa274ec59f69daba6.html), set up a new connector to your SAP BTP subacount.  
 Select "Cloud to On-Premise", Add a new “Mapping Virtual to Internal ABAP System”,  
 
@@ -163,7 +163,7 @@ Select the “Send Error Mail” mail task, in the right properties section, swi
 [Build and deploy](https://help.sap.com/viewer/825270ffffe74d9f988a0f0066ad59f0/CF/en-US/1b0a7a0938944c7fac978d4b8e23a63f.html) to the project to SAP Business Technology Platform.
 
 #### Find the Service Key Data
-After successful deployment, open your SCP cockpit, navigate to the space you deployed the project.  
+After successful deployment, open your SAP BTP cockpit, navigate to the space you deployed the project.  
 Select the menu item “Services”-> “Service Instances”, in the right list of application, click the application name “AIF_Alert_Management”, the details of this application will be displayed in a new page.  
 From the bottom section, a json file is displayed, find the following information from this json.  
 
@@ -181,7 +181,7 @@ Logon to your SAP S/4 HANA System.
 Open transaction "SM59", create a new RFC destination with connection type “G”.  
 In the “Technical Settings” section, maintain the following parameters:  
 
-	Targ       : api.workflow-sap.cfapps.eu10.hana.ondemand.com (might be different based on your SCP account)
+	Targ       : api.workflow-sap.cfapps.eu10.hana.ondemand.com (might be different based on your SAP BTP account)
 	Path Prefix: /workflow-service
 Regards system security requirement, In “Logon & Security” section, set inactive or active the “SSL” of “Status of secure Protocol”,	
 Below is a sample destination.    
@@ -209,7 +209,7 @@ Looks like below:
 
 <div align=center><img src="./images/oAuth_Client2.png"/></div> 
 
-### Link AIF with SCP Workflow Service
+### Link AIF with SAP Workflow Service
 Open transaction “SEGW”, make sure the service “SWF_CPWF_NOTIFICATION_SRV” was registered for testing ABAP sysetm.  
 
 Open transaction “SM30”,   
@@ -240,7 +240,7 @@ Looks like below:
 <div align=center><img src="./images/WF_AIF_Link.png"/></div> 
 
 ### Link AIF Interface with Workflow Definition
-Open transaction “/AIF/CUST”, click IMG node “SAP Application Interface Framework” -> “System Configuration-> “SCP Workflow Service Integration” -> “Settings for Integration of SCP Workflow Service”.  
+Open transaction “/AIF/CUST”, click IMG node “SAP Application Interface Framework” -> “System Configuration-> “SAP Workflow Service Integration” -> “Settings for Integration of SAP Workflow Service”.  
 In the data maintenance overview screen, create a new entry for your AIF interface.     
 Fill the following fields:    
 
@@ -255,7 +255,7 @@ Looks like below:
 Logon to your SAP S/4 HANA System.
 Send AIF message with error logs for the AIF interface you configured previously.
 
-# Monitoring at SCP	
+# Monitoring at SAP BTP	
 Open your web browser, logon to the Monitoring Launchpad URL you got previously.    
 In the Fiori Launchpad, select tile “My Inbox”, the user task application will be displayed.    
 Select the list item, in the right part of the same page, the AIF message information will be displayed.  
@@ -264,8 +264,8 @@ Looks like below:
 <div align=center><img src="./images/User_Task2.png"/></div> 
 
 # Trouble Shooting
-## SCP Service Call Logs
-If you have triggered the AIF message from S/4 HANA system, but cannot see any user task in the SCP Monitoring Launchpad inbox.
+## SAP Workflow Service Call Logs
+If you have triggered the AIF message from S/4 HANA system, but cannot see any user task in the SAP BTP Monitoring Launchpad inbox.
 You can logon to your S/4 HANA system, open transaction “SLG1”.  
 In the selection screen, fill the following parameters:  
 
@@ -275,7 +275,7 @@ In the selection screen, fill the following parameters:
 	To (Date/Time)  : The date you sent message 23:59:59
 
 Press “Execute” button.   
-You can check the SCP service call logs in the result list, looks like below:  
+You can check the SAP workflow service call logs in the result list, looks like below:  
 
 <div align=center><img src="./images/SCP_Call_Log.png"/></div> 
 

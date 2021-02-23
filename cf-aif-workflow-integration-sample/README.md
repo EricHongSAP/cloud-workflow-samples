@@ -22,7 +22,7 @@ S/4 HANA system with AIF interface.
 # Setup Guide
 ## Setup in SAP Business Technology Platform (SAP BTP)
 ### Create SAP Workflow Service Instance
-[Refer to help document](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5516f912bae84922ba8c8eb46b8bfce5.html), create a new SAP Workflow service instance with following parameters:
+[Refer to help document](https://help.sap.com/viewer/09cc82baadc542a688176dce601398de/Cloud/en-US/fad874a99a434ae58c59d7340a528bdc.html), create a new SAP Workflow service instance with following parameters:
 
 	Instance Name: AIF_Alert_Management
 	Parameters   : 

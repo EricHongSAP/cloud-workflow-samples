@@ -23,7 +23,7 @@ To follow this setup guide, you need the following:
 # Setup Guide
 ## Setup in SAP Business Technology Platform (SAP BTP)
 ### Create SAP Workflow Service Instance
-Following the [help documentation](https://help.sap.com/viewer/65de2977205c403bbc107264b8eccf4b/Cloud/en-US/5516f912bae84922ba8c8eb46b8bfce5.html), create a new SAP Workflow service instance with the following parameters:
+[Refer to help document](https://help.sap.com/viewer/09cc82baadc542a688176dce601398de/Cloud/en-US/fad874a99a434ae58c59d7340a528bdc.html), create a new SAP Workflow service instance with following parameters:
 
 	Instance Name: AIF_Alert_Management
 	Parameters   : 
@@ -180,8 +180,8 @@ In the “Technical Settings” section, maintain the following parameters:
 
 	Targ       : api.workflow-sap.cfapps.eu10.hana.ondemand.com (might be different based on your SAP BTP account)
 	Path Prefix: /workflow-service
-Depending on your system security requirements, in the “Logon & Security” section, activate or deactivate the “SSL” of “Status of secure Protocol”.	
-The following is a sample destination:     
+Depending on your system security requirements, in the “Logon & Security” section, activate or deactivate the field “SSL” of “Status of secure Protocol”.	
+The following is a sample destination:       
 
  <div align=center><img src="./images/SM59_Dest.png"/></div>    
 
@@ -279,5 +279,5 @@ It's not possible to change AIF message content or restart/cancel AIF messages.
 The project is provided "as-is", with no expected changes or support.
 
 # License
-Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the SAP SAMPLE CODE LICENSE AGREEMENT.  
+Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved. This file is licensed under the SAP SAMPLE CODE LICENSE AGREEMENT.  
 

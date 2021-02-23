@@ -1,7 +1,7 @@
 # SAP Application Interface Framework and SAP Workflow Service Integration Sample
-The sample project of thhe SAP Application Interface Framework (AIF) SAP Workflow service integration sample project can be used as reference content. Users can download and import the content of this project to their tenant to understand and learn how to integrate SAP Applcation Interface Framework and SAP Workflow service.  
+The SAP Application Interface Framework (AIF) SAP Workflow service integration sample project can be used as reference content. Users can download and import the content of this project to their tenant to understand and learn how to integrate SAP Applcation Interface Framework and SAP Workflow service.  
 
-[SAP Workflow service](https://help.sap.com/viewer/product/WORKFLOW_SERVICE/Cloud/en-US) allows you to build, run, and manage workflows, from simple approvals to end-to-end processes that can span across different organizations and applications. With an inbox application and custom-built user interfaces, you involve end users into business processes for decision making and data entry.
+The [SAP Workflow service](https://help.sap.com/viewer/product/WORKFLOW_SERVICE/Cloud/en-US) allows you to build, run, and manage workflows, from simple approvals to end-to-end processes that can span across different organizations and applications. With an inbox application and custom-built user interfaces, you involve end users into business processes for decision making and data entry.
 
 [SAP Application Interface Framework (AIF)](https://www.sap.com/products/application-interface-mgmt.html) allows you to implement, monitor, and manage application interfaces from a central location to simplify interface handling across your system landscape.
 
@@ -17,13 +17,13 @@ To follow this setup guide, you need the following:
 * SAP Business Technology Platform tenant - If you don't have one, you could get your hands on a [free trial account](https://www.sap.com/products/free-trials.html)
 * Active subscription to [SAP Workflow service](https://www.sap.com/developer/tutorials/cp-workflow-getting-started.html) in your SAP BTP tenant
 * [Enable the Workflow Editor feature](https://help.sap.com/viewer/f85276c5069a429fa37d1cd352785c25/Cloud/en-US/07adfa6d819a42e9966e63de1a654de4.html) in SAP Web IDE Full-Stack  
-* Active subscription to SAP Connectivity service, SAP Destination service, SAP Cloud Portal service and SAP WebIDE Full-Stack in your SAP BTP tenant
-* SAP S/4HANA system with AIF interface
+* Active subscription to SAP Connectivity service, SAP Destination service, SAP Cloud Portal service and SAP Web IDE Full-Stack in your SAP BTP tenant
+* SAP S/4HANA system with SAP Application Interface Framework interface
 
 # Setup Guide
 ## Setup in SAP Business Technology Platform (SAP BTP)
 ### Create SAP Workflow Service Instance
-[Refer to help document](https://help.sap.com/viewer/09cc82baadc542a688176dce601398de/Cloud/en-US/fad874a99a434ae58c59d7340a528bdc.html), create a new SAP Workflow service instance with following parameters:
+Following the [help documentation](https://help.sap.com/viewer/09cc82baadc542a688176dce601398de/Cloud/en-US/fad874a99a434ae58c59d7340a528bdc.html), create a new SAP Workflow service instance with the following parameters:
 
 	Instance Name: AIF_Alert_Management
 	Parameters   : 
